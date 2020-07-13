@@ -6,6 +6,7 @@
     - [Tree](DataStructure/Tree.md)
     - [Heap](DataStructure/Heap.md)
     - [Hash](DataStructure/Hash.md)
+    - [Graph](DataStructure/Graph.md)
 
 2. Algorithm
 
