@@ -9,6 +9,7 @@
     - [Graph](DataStructure/Graph.md)
 
 2. Algorithm
+    - [완전 탐색](Algorithm/Brute_force.md)
 
 3. Operating system
 
