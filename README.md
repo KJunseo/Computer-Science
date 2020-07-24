@@ -14,8 +14,10 @@
     - 정렬
         - [선택 정렬](Algorithm/Selection_sort.md)
         - [삽입 정렬](Algorithm/Insertion_sort.md)
+        - [버블 정렬](Algorithm/Bubble_sort.md)
         - [병합 정렬](Algorithm/Merge_sort.md)
         - [퀵 정렬](Algorithm/Quick_sort.md)
+    - [동적 계획법](Algorithm/Dynamic_programming.md)
 
 3. Operating system
 
