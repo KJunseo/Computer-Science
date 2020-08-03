@@ -18,6 +18,7 @@
         - [병합 정렬](Algorithm/Merge_sort.md)
         - [퀵 정렬](Algorithm/Quick_sort.md)
     - [동적 계획법](Algorithm/Dynamic_programming.md)
+    - [탐욕적 알고리즘](Algorithm/Greedy.md)
 
 3. Operating system
 
