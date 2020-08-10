@@ -7,7 +7,7 @@
 1. 가장 단순한 방법
     2부터 n-1까지의 모든 수를 순회하면서 이 중 n의 약수가 있는지 확인하는 방법
 
-    <code>
+    ```
     bool isPrime(int n) {
         if(n <= 1) return false;
         if(n == 2) return true;
@@ -20,4 +20,4 @@
             if(n % div == 0) return false;
         }
     }
-    </code>
+    ```
