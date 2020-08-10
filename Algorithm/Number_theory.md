@@ -19,5 +19,7 @@
         for(int div = 3; div <= sqrtn; div += 2) {
             if(n % div == 0) return false;
         }
+        
+        return true;
     }
     ```
