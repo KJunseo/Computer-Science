@@ -9,7 +9,6 @@
 
     <code>
     bool isPrime(int n) {
-        
         if(n <= 1) return false;
         if(n == 2) return true;
 
@@ -20,6 +19,5 @@
         for(int div = 3; div <= sqrtn; div += 2) {
             if(n % div == 0) return false;
         }
-
     }
     </code>
