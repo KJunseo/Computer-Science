@@ -24,27 +24,27 @@
     }
     ```
 
-    #### 소인수분해
-    
-    합성수를 소수들의 곱으로 표현하는 방법
+#### 소인수분해
 
-    1. 가장 단순한 방법
-        2부터 시작하여 n의 소인수가 될 수 있는 수들을 순회하면서, n의 약수를 찾을 때마다 n을 그 숫자로 나누는 방법
+합성수를 소수들의 곱으로 표현하는 방법
 
-        ```
-        vector<int> factorSimple(int n) {
-            vector<int> ret;
-            int sqrtn = int(sqrt(n));
+1. 가장 단순한 방법
+    2부터 시작하여 n의 소인수가 될 수 있는 수들을 순회하면서, n의 약수를 찾을 때마다 n을 그 숫자로 나누는 방법
 
-            for(int div = 2; div <= sqrtn; div++) {
-                while(n % div == 0) {
-                    n /= div;
-                    ret.push_back(div);
-                }
+    ```
+    vector<int> factorSimple(int n) {
+        vector<int> ret;
+        int sqrtn = int(sqrt(n));
+
+        for(int div = 2; div <= sqrtn; div++) {
+            while(n % div == 0) {
+                n /= div;
+                ret.push_back(div);
             }
-
-            if(n > 1) ret.push_back(n);
-
-            return ret;
         }
-        ```
+
+        if(n > 1) ret.push_back(n);
+
+        return ret;
+    }
+    ```
