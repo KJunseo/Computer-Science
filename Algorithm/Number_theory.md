@@ -86,3 +86,47 @@ void eratosthenes() {
 ```
 
 수행 시간이 빠르지만, 메모리를 많이 사용할 수 있다. 짝수를 별도로 처리하든지, 비트마스크를 사용하든지 하여 메모리 사용량을 최적화해야한다.
+
+#### 에라토스테네스의 체를 이용한 빠른 소인수 분해
+
+**각 숫자가 소수인지 합성수인지만을 기록하지 않고, 각 숫자의 가장 작은 소인수를 같이 기록해둔다.**
+
+```
+int minFactor[MAX_N]; // 각 수의 가장 작은 소인수를 기록해 두는 배열
+
+// 에라토스테네스의 체
+void eratosthenes() {
+
+    minFactor[0] = minFactor[1] = -1; // 1은 예외 처리 해주기
+
+    // 자기자신으로 초기화
+    for(int i = 2; i <= n; i++) {
+        minFactor[i] = i;
+    }
+
+    int sqrtn = int(sqrt(n));
+    for(int i = 2; i <= sqrtn; i++) {
+        if(minFactor[i] == i) {
+            for(int j = i*i; j <= n; j+=i) {
+
+                // 아직 약수를 본 적 없는 수인 경우 i로 바꾸기 
+                if(minFactor[j] == j) {
+                    minFactor[j] == i;
+                }
+            }
+        }
+    }
+}
+
+// 소인수 분해
+vector<int> factor(int n) {
+    vector<int> ret;
+
+    while(n > 1) {
+        ret.push_back(minFactor[n]);
+        n /= minFactor[n];
+    }
+
+    return ret; 
+}
+```
