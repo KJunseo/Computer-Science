@@ -130,3 +130,30 @@ vector<int> factor(int n) {
     return ret; 
 }
 ```
+
+### 유클리드 알고리즘
+
+두 수의 최대공약수를 구하는 방법
+
+두 수 p, q 공약수의 집합은 p-q, q의 공약수의 집합과 같다는 점을 이용(p>q)
+
+위의 과정을 반복하다보면 빼기가 존재하기 때문에 어느 한쪽이 0이 된다.
+
+```
+int gcd(int p, int q) {
+    if(p < q) swap(p, q);
+    if(q == 0) return p;
+
+    return gcd(p-q, q);
+}
+```
+
+위 코드를 최적화 하려면 p에서 q를 빼는 대신 p를 q로 나눈 나머지를 취하면 된다.
+
+```
+int gcd(int p, int q) {
+    if(q == 0) return p;
+
+    return gcd(q, p % q);
+}
+```
