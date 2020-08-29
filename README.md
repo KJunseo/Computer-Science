@@ -20,6 +20,8 @@
     - [동적 계획법](Algorithm/Dynamic_programming.md)
     - [탐욕적 알고리즘](Algorithm/Greedy.md)
     - [정수론](Algorithm/Number_theory.md)
+    - [DFS](Algorithm/DFS.md)
+    - [BFS](Algorithm/BFS.md)
 
 3. Operating system
 
